@@ -7,6 +7,7 @@ SELECT productName, productVendor
 FROM productlines
 LEFT JOIN products ON products.productline = productlines.productLine;
 -- Question 3 RIGHT JOIN
-SELECT orderDate, shippedDate, status
+SELECT orders.customerNumber, orderDate, shippedDate, status
 FROM customers
-RIGHT JOIN orders ON customers.customerNumber = orders.customerNumber;
+RIGHT JOIN orders ON customers.customerNumber = orders.customerNumber
+LIMIT 10;
